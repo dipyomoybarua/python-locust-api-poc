@@ -1,0 +1,48 @@
+# Ignore Python bytecode files
+utils/__pycache__/
+__pycache__
+.pytest_cache/
+tests/__pycache__/
+# Ignore these files as well
+features/
+steps/
+/tests/*
+# Except for conftest.py
+!conftest.py
+
+# Ignore specific files in utils and run_tests files
+utils/assertions.py
+utils/inventory_keys.py
+run_tests.py
+
+
+# Ignore virtual environment directories
+my_python_project_env/
+venv/
+.venv/
+
+# Ignore all HTML files
+*.html
+
+# Ignore IDE or editor settings
+.vscode/
+.idea/
+*.iml
+.DS_Store
+
+# Ignore generated files and directories
+dist/
+build/
+*.egg-info/
+*.log
+*.tmp
+
+# Ignore sensitive or environment-specific files
+.env
+.env.*
+
+# Ignore backup files
+*~
+
+# Ignore reports
+/reports/
