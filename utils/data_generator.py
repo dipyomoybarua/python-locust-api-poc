@@ -21,6 +21,24 @@ class DataGenerator:
             ],
             "status": self.fake.random_element(elements=("available", "pending", "sold"))
         }
+        
+    def generate_update_pet_data_with_faker(self, pet_id):
+        return {
+            "id": pet_id,
+            "category": {
+                "id": self.fake.random_int(min=1, max=100),
+                "name": self.fake.word()
+            },
+            "name": self.fake.first_name(),
+            "photoUrls": [self.fake.url()],
+            "tags": [
+                {
+                    "id": self.fake.random_int(min=1, max=100),
+                    "name": self.fake.word()
+                }
+            ],
+            "status": self.fake.random_element(elements=("available", "pending", "sold"))
+        }
 
     def generate_order_data_with_faker(self):
         return {
