@@ -1,6 +1,7 @@
 from locust import HttpUser, between
 from utils.api_client import APIClient
 from utils.data_generator import DataGenerator
+from utils.event_listeners import on_test_start, on_test_stop
 import yaml
 import os
 
@@ -9,7 +10,9 @@ class BaseApiUser(HttpUser):
     abstract = True
 
     def on_start(self):
-        config_path = "../../config/config.yaml"
+        script_dir = os.path.dirname(__file__)
+        config_path = os.path.join(script_dir, '..', 'config', 'config.yaml')
+
         if not os.path.exists(config_path):
             raise FileNotFoundError(f"Config file not found: {os.path.abspath(config_path)}")
 

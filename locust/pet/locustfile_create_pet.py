@@ -3,7 +3,7 @@ from utils.logger import logger
 import utils.event_listeners  
 from locust_base import BaseApiUser
 
-class PetApiUser(BaseApiUser):
+class CreatePetApiUser(BaseApiUser):
     
     @task(3)
     def create_pet(self):
