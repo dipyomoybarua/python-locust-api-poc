@@ -1,7 +1,6 @@
 from locust import HttpUser, between
 from utils.api_client import APIClient
 from utils.data_generator import DataGenerator
-from utils.event_listeners import on_test_start, on_test_stop
 import yaml
 import os
 
