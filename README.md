@@ -12,6 +12,8 @@ This repository contains scripts for performance testing APIs using Locust, a po
 
 `pip install -r requirements.txt`
 
+3. Set the python path for the powershell :- `$env:PYTHONPATH=E:\path\to\your\project\api_test_framework:PYTHONPATH"`
+
 ## Project Structure:-
 
 `locust/`: Contains Locust files for defining tasks and scenarios.
@@ -24,5 +26,11 @@ This repository contains scripts for performance testing APIs using Locust, a po
 1. Modify config/config.yaml with your API base URL, headers, and endpoints.
 
 2. Run Locust with:
+    Now you want to run a perticular file eg like locustfile_create_pet.py:-
 
-`locust -f locust/pet/locustfile_create_pet.py --host=https://petstore.swagger.io/v2` (Modify according to your folder structure)
+    `\path\to\your\project\api_test_framework\locustfile_create_pet.py`
+
+    `locust -f locust/pet/locustfile_create_pet.py --host=https://petstore.swagger.io/v2` (Modify according to your folder structure)
+
+    If you want to run in headless mode then the format is :-
+    `locust -f .\locustfile_create_pet.py --host=https://petstore.swagger.io/v2 --headless -u 200- r 5`
