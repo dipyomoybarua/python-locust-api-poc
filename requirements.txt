@@ -7,3 +7,4 @@ behave
 pytest-bdd
 pytest-xdist
 locust
+coverage
