@@ -5,7 +5,7 @@ import yaml
 import os
 
 class BaseApiUser(HttpUser):
-    wait_time = between(1, 5)  # Wait between 1 and 5 seconds between tasks
+    wait_time = between(1, 2)  # Wait between 1 and 2 seconds between tasks
     abstract = True
 
     def on_start(self):
